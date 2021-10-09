@@ -74,7 +74,7 @@ public class GetStateWiseList {
 	 
 	  test.pass("Total Vaccinated"+sum);
   }
-
+//init
   @DataProvider(name="values")
   public Object[][] dp() {
     return new Object[][] {
