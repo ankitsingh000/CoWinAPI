@@ -23,6 +23,7 @@ public class GetMethodParams {
 			  	.then()
 			  	
 			  	.extract().response();
+	  //new changes made
 	  System.out.println(response.asString());
 	  JsonPath jsonPath = response.jsonPath();
 	  String postId = jsonPath.getString("id[0]");
