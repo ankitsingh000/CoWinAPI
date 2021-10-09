@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3656" started-at="2021-10-03T18:42:13Z" finished-at="2021-10-03T18:42:16Z">
+  <suite name="Default suite" duration-ms="1796" started-at="2021-10-09T18:15:21Z" finished-at="2021-10-09T18:15:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3656" started-at="2021-10-03T18:42:13Z" finished-at="2021-10-03T18:42:16Z">
-      <class name="methods.GetVacPublicReport">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:methods.GetVacPublicReport@157632c9]" name="beforeTest" is-config="true" duration-ms="854" started-at="2021-10-04T00:12:13Z" finished-at="2021-10-04T00:12:13Z">
+    <test name="Default test" duration-ms="1796" started-at="2021-10-09T18:15:21Z" finished-at="2021-10-09T18:15:23Z">
+      <class name="methods.LiveStation">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:methods.LiveStation@157632c9]" name="beforeTest" is-config="true" duration-ms="7" started-at="2021-10-09T23:45:21Z" finished-at="2021-10-09T23:45:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="sendGetRequest()[pri:0, instance:methods.GetVacPublicReport@157632c9]" name="sendGetRequest" duration-ms="2036" started-at="2021-10-04T00:12:13Z" finished-at="2021-10-04T00:12:16Z">
+        <test-method status="PASS" signature="fetchData()[pri:0, instance:methods.LiveStation@157632c9]" name="fetchData" duration-ms="1780" started-at="2021-10-09T23:45:21Z" finished-at="2021-10-09T23:45:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sendGetRequest -->
-        <test-method status="PASS" signature="validateDate()[pri:0, instance:methods.GetVacPublicReport@157632c9]" name="validateDate" duration-ms="310" started-at="2021-10-04T00:12:16Z" finished-at="2021-10-04T00:12:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateDate -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:methods.GetVacPublicReport@157632c9]" name="afterTest" is-config="true" duration-ms="440" started-at="2021-10-04T00:12:16Z" finished-at="2021-10-04T00:12:16Z">
+        </test-method> <!-- fetchData -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:methods.LiveStation@157632c9]" name="afterTest" is-config="true" duration-ms="0" started-at="2021-10-09T23:45:23Z" finished-at="2021-10-09T23:45:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- methods.GetVacPublicReport -->
+      </class> <!-- methods.LiveStation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
