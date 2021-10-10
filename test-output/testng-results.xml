@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1796" started-at="2021-10-09T18:15:21Z" finished-at="2021-10-09T18:15:23Z">
+  <suite name="Default suite" duration-ms="4520" started-at="2021-10-10T10:04:26Z" finished-at="2021-10-10T10:04:31Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1796" started-at="2021-10-09T18:15:21Z" finished-at="2021-10-09T18:15:23Z">
-      <class name="methods.LiveStation">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:methods.LiveStation@157632c9]" name="beforeTest" is-config="true" duration-ms="7" started-at="2021-10-09T23:45:21Z" finished-at="2021-10-09T23:45:21Z">
+    <test name="Default test" duration-ms="4520" started-at="2021-10-10T10:04:26Z" finished-at="2021-10-10T10:04:31Z">
+      <class name="methods.FetchVaccinationDetails">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:methods.FetchVaccinationDetails@55040f2f]" name="beforeTest" is-config="true" duration-ms="725" started-at="2021-10-10T15:34:26Z" finished-at="2021-10-10T15:34:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="fetchData()[pri:0, instance:methods.LiveStation@157632c9]" name="fetchData" duration-ms="1780" started-at="2021-10-09T23:45:21Z" finished-at="2021-10-09T23:45:23Z">
+        <test-method status="PASS" signature="sendGetRequest()[pri:0, instance:methods.FetchVaccinationDetails@55040f2f]" name="sendGetRequest" duration-ms="1833" started-at="2021-10-10T15:34:27Z" finished-at="2021-10-10T15:34:29Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- fetchData -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:methods.LiveStation@157632c9]" name="afterTest" is-config="true" duration-ms="0" started-at="2021-10-09T23:45:23Z" finished-at="2021-10-09T23:45:23Z">
+        </test-method> <!-- sendGetRequest -->
+        <test-method status="PASS" signature="dataValidation()[pri:0, instance:methods.FetchVaccinationDetails@55040f2f]" name="dataValidation" duration-ms="1950" started-at="2021-10-10T15:34:29Z" depends-on-methods="methods.FetchVaccinationDetails.sendGetRequest" finished-at="2021-10-10T15:34:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataValidation -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:methods.FetchVaccinationDetails@55040f2f]" name="afterTest" is-config="true" duration-ms="0" started-at="2021-10-10T15:34:31Z" finished-at="2021-10-10T15:34:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- methods.LiveStation -->
+      </class> <!-- methods.FetchVaccinationDetails -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
