@@ -16,6 +16,11 @@ import java.util.List;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.BeforeTest;
+
+import org.json.JSONException;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.*;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -47,11 +52,32 @@ public class GetStateWiseList {
 
   }
   @Test(dependsOnMethods="f")
-  public void printResponse() {
-	  System.out.println(response.asPrettyString());
+  public void printResponse() throws ParseException {
+	 // System.out.println(response.asPrettyString());
 	  test = extent.createTest("TC_02","Validate the response structure");
 	  Assert.assertTrue(true);
 	  test.pass("Response has been printed");
+	  JSONParser parser = new JSONParser();  
+	  String jsonData ="{\n" + 
+	  		"    \"Sample_01\": {\n" + 
+	  		"        \"class\": \"Tenant\",\n" + 
+	  		"        \"A1\": {\n" + 
+	  		"            \"class\": \"Application\",\n" + 
+	  		"            \"template\": \"http\"\n" + 
+	  		"        }\n" + 
+	  		"    },\n" + 
+	  		"    \"Sample_02\": {\n" + 
+	  		"        \"class\": \"Tenant\",\n" + 
+	  		"        \"A2\": {\n" + 
+	  		"            \"class\": \"Application\",\n" + 
+	  		"            \"template\": \"http\"\n" + 
+	  		"        }\n" + 
+	  		"    }\n" + 
+	  		"}";
+	  JSONObject json = (JSONObject) parser.parse(jsonData);  
+	  
+	  printJSON(json);
+	  
   }
   @Test(dependsOnMethods="printResponse")
   public void validateJsonPath() {
@@ -71,9 +97,42 @@ public class GetStateWiseList {
 	  for (int age : age18) {
 		sum+=age;
 	}
-	 
 	  test.pass("Total Vaccinated"+sum);
   }
+  
+  public static void printJSON(JSONObject jsonObj) {
+	  for (Object keyObj : jsonObj.keySet()) {
+	  String key = (String)keyObj;
+	  Object valObj = jsonObj.get(key);
+	  if (valObj instanceof JSONObject) {
+	  // call printJSON on nested object
+	  printJSON((JSONObject) valObj);
+	  }else if(valObj instanceof JSONArray) {
+		printJsonArray((JSONArray)valObj);
+	  }else {
+	  // print key-value pair
+		  System.out.println("----------------");
+	  System.out.println("key : "+key);
+	  System.out.println("value : "+valObj.toString());
+	  }
+	  }
+  }
+private static void printJsonArray(JSONArray array) {
+	// List<Object> list = new ArrayList<Object>();
+	System.out.println(array.size());
+    for(int i = 0; i <  array.size(); i++) {
+        Object value = array.get(i);
+        if(value instanceof JSONArray) {
+            printJsonArray((JSONArray) value);
+        }
+
+        else if(value instanceof JSONObject) {
+             printJSON((JSONObject) value);
+        }
+        //list.add(value);
+    }
+	
+}
 //init
   @DataProvider(name="values")
   public Object[][] dp() {

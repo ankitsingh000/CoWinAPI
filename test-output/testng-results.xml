@@ -1,29 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3656" started-at="2021-10-03T18:42:13Z" finished-at="2021-10-03T18:42:16Z">
+  <suite name="Default suite" duration-ms="4487" started-at="2021-10-25T20:00:43Z" finished-at="2021-10-25T20:00:47Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3656" started-at="2021-10-03T18:42:13Z" finished-at="2021-10-03T18:42:16Z">
-      <class name="methods.GetVacPublicReport">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:methods.GetVacPublicReport@157632c9]" name="beforeTest" is-config="true" duration-ms="854" started-at="2021-10-04T00:12:13Z" finished-at="2021-10-04T00:12:13Z">
+    <test name="Default test" duration-ms="4487" started-at="2021-10-25T20:00:43Z" finished-at="2021-10-25T20:00:47Z">
+      <class name="methods.GetStateWiseList">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:methods.GetStateWiseList@35083305]" name="beforeTest" is-config="true" duration-ms="846" started-at="2021-10-26T01:30:43Z" finished-at="2021-10-26T01:30:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="sendGetRequest()[pri:0, instance:methods.GetVacPublicReport@157632c9]" name="sendGetRequest" duration-ms="2036" started-at="2021-10-04T00:12:13Z" finished-at="2021-10-04T00:12:16Z">
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String)[pri:0, instance:methods.GetStateWiseList@35083305]" name="f" duration-ms="1863" started-at="2021-10-26T01:30:44Z" data-provider="values" finished-at="2021-10-26T01:30:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[34]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[664]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sendGetRequest -->
-        <test-method status="PASS" signature="validateDate()[pri:0, instance:methods.GetVacPublicReport@157632c9]" name="validateDate" duration-ms="310" started-at="2021-10-04T00:12:16Z" finished-at="2021-10-04T00:12:16Z">
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="printResponse()[pri:0, instance:methods.GetStateWiseList@35083305]" name="printResponse" duration-ms="13" started-at="2021-10-26T01:30:45Z" depends-on-methods="methods.GetStateWiseList.f" finished-at="2021-10-26T01:30:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateDate -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:methods.GetVacPublicReport@157632c9]" name="afterTest" is-config="true" duration-ms="440" started-at="2021-10-04T00:12:16Z" finished-at="2021-10-04T00:12:16Z">
+        </test-method> <!-- printResponse -->
+        <test-method status="PASS" signature="validateJsonPath()[pri:0, instance:methods.GetStateWiseList@35083305]" name="validateJsonPath" duration-ms="1179" started-at="2021-10-26T01:30:45Z" depends-on-methods="methods.GetStateWiseList.printResponse" finished-at="2021-10-26T01:30:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateJsonPath -->
+        <test-method status="PASS" signature="ageWiseData()[pri:0, instance:methods.GetStateWiseList@35083305]" name="ageWiseData" duration-ms="88" started-at="2021-10-26T01:30:47Z" depends-on-methods="methods.GetStateWiseList.validateJsonPath" finished-at="2021-10-26T01:30:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ageWiseData -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:methods.GetStateWiseList@35083305]" name="afterTest" is-config="true" duration-ms="458" started-at="2021-10-26T01:30:47Z" finished-at="2021-10-26T01:30:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- methods.GetVacPublicReport -->
+      </class> <!-- methods.GetStateWiseList -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
