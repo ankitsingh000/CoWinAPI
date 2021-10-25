@@ -26,8 +26,8 @@ public class PostRequest {
   public void postMethod() {
 	 
 	  JSONObject requestParams = new JSONObject();
-	  requestParams.put("mobile", "7044496717");
-	  requestParams.put("secret", "U2FsdGVkX18XI8Ha8IHyUhqxKf7ztD7EZwcb9KAehdCwQQXwN84jK4lAywgntuC9I4wjKayQGk9ZsSb2BQfkxQ==");
+	  requestParams.put("mobile", "7349403893");
+	  requestParams.put("secret", "U2FsdGVkX18DIO8I64Dg5TOIOLq52Ithl7KRGRGxI0pYasBkbsxpR9STOhuol+U0JuTMLolYYGUknVlQEd6m4w==");
 	  response = given()
 			  	.header("user-agent"," Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36")
 			  	.contentType(ContentType.JSON)
@@ -38,6 +38,7 @@ public class PostRequest {
 			  	.then()
 			  	.extract().response();
 	  Assert.assertEquals(response.statusCode(), 200);
+	  System.out.println(response.statusCode());
   }
   @Test(dependsOnMethods = "postMethod")
   public void extractTxnId() {

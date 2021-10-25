@@ -3,13 +3,16 @@
 <suite name="Failed suite [Default suite]" parallel="none">
   <test name="Default test(failed)" parallel="none">
     <classes>
-      <class name="methods.FetchVaccinationDetails">
+      <class name="methods.GetStateWiseList">
         <methods>
-          <include name="afterTest"/>
-          <include name="dataValidation"/>
           <include name="beforeTest"/>
+          <include name="f"/>
+          <include name="ageWiseData"/>
+          <include name="printResponse"/>
+          <include name="validateJsonPath"/>
+          <include name="afterTest"/>
         </methods>
-      </class> <!-- methods.FetchVaccinationDetails -->
+      </class> <!-- methods.GetStateWiseList -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
